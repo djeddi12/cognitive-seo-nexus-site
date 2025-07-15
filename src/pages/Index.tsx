@@ -123,7 +123,7 @@ const Index = () => {
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center px-4 py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-green-900/20">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%2322c55e" fill-opacity="0.05"%3E%3Ccircle cx="30" cy="30" r="1"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-50"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%2322c55e\" fill-opacity=\"0.05\"%3E%3Ccircle cx=\"30\" cy=\"30\" r=\"1\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-50"></div>
         
         <div className="text-center max-w-4xl mx-auto relative z-10">
           <div className="mb-8 animate-fade-in">
@@ -139,7 +139,7 @@ const Index = () => {
           </h2>
           
           <p className="text-lg md:text-xl text-green-400 mb-8 font-medium animate-fade-in" style={{animationDelay: '0.4s'}}>
-            "{currentContent.heroDescription}"
+            &quot;{currentContent.heroDescription}&quot;
           </p>
           
           <Button 
@@ -248,7 +248,7 @@ const Index = () => {
                       <Star key={i} className="w-5 h-5 text-green-400 fill-current" />
                     ))}
                   </div>
-                  <p className="text-gray-300 mb-4 italic">"{testimonial.text}"</p>
+                  <p className="text-gray-300 mb-4 italic">&quot;{testimonial.text}&quot;</p>
                   <p className="text-green-400 font-semibold">- {testimonial.author}</p>
                 </CardContent>
               </Card>
