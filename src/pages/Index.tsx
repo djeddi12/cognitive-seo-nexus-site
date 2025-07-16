@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Brain, Zap, Eye, Shield, Target, Code, ChevronDown, Globe, Download, Star, Check, Book, Lock, Search } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -139,7 +138,7 @@ const Index = () => {
     },
     {
       title: "Module 3: Cognitive Load Optimization",
-      text: "Cognitive load isn't about content length — it's about neural engineering. When you design your message to match the brain's attention rhythms, you don't just inform. You embed.",
+      text: "Cognitive load isn't about content length – it's about neural engineering. When you design your message to match the brain's attention rhythms, you don't just inform. You embed.",
       power: "Perfect for showing that your strategy uses neuroscience to improve SEO performance.",
       icon: <Target className="w-6 h-6 text-green-400" />
     }
@@ -420,25 +419,22 @@ const Index = () => {
               <p className="text-gray-400 text-sm mb-4">Created by Aimad Djeddi</p>
             </div>
 
-            {/* Quick Links */}
-            <div>
-              <h4 className="text-lg font-semibold text-white mb-4">Quick Links</h4>
-              <ul className="space-y-2 text-sm">
-                <li><a href="/features" className="text-gray-400 hover:text-green-400 transition-colors">Features</a></li>
-                <li><a href="/results" className="text-gray-400 hover:text-green-400 transition-colors">Results</a></li>
-                <li><a href="/pricing" className="text-gray-400 hover:text-green-400 transition-colors">Pricing</a></li>
-                <li><a href="/articles" className="text-gray-400 hover:text-green-400 transition-colors">Articles</a></li>
-                <li><a href="/affiliate-support" className="text-gray-400 hover:text-green-400 transition-colors">Affiliate Support</a></li>
-              </ul>
-            </div>
-
             {/* Support */}
             <div>
               <h4 className="text-lg font-semibold text-white mb-4">Support</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="/support" className="text-gray-400 hover:text-green-400 transition-colors">Support</a></li>
                 <li><a href="/faq" className="text-gray-400 hover:text-green-400 transition-colors">FAQ</a></li>
                 <li><a href="/contact" className="text-gray-400 hover:text-green-400 transition-colors">Contact</a></li>
+              </ul>
+            </div>
+
+            {/* Legal */}
+            <div>
+              <h4 className="text-lg font-semibold text-white mb-4">Legal</h4>
+              <ul className="space-y-2 text-sm">
+                <li><a href="/privacy-policy" className="text-gray-400 hover:text-green-400 transition-colors">Privacy Policy</a></li>
+                <li><a href="/terms" className="text-gray-400 hover:text-green-400 transition-colors">Terms of Service</a></li>
+                <li><a href="/legal" className="text-gray-400 hover:text-green-400 transition-colors">Legal Information</a></li>
               </ul>
             </div>
 
@@ -454,13 +450,6 @@ const Index = () => {
           </div>
           
           <div className="border-t border-gray-800 pt-8">
-            <div className="grid md:grid-cols-2 gap-4 mb-4">
-              <div className="space-x-4">
-                <a href="/privacy-policy" className="text-gray-400 hover:text-green-400 transition-colors text-sm">Privacy Policy</a>
-                <a href="/terms" className="text-gray-400 hover:text-green-400 transition-colors text-sm">Terms of Service</a>
-                <a href="/legal" className="text-gray-400 hover:text-green-400 transition-colors text-sm">Legal Information</a>
-              </div>
-            </div>
             <div className="text-center">
               <div className="text-gray-500 text-sm mb-2">
                 © 2024 FastSEOHub.com - Cognitive SEO Warfare. All rights reserved.
