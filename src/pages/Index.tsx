@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Brain, Zap, Eye, Shield, Target, Code, ChevronDown, Globe, Download, Star, Check } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -194,7 +193,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Preview Section */}
+      {/* Preview Section with Cover */}
       <section className="py-20 px-4 bg-gray-800/50">
         <div className="max-w-4xl mx-auto text-center">
           <h3 className="text-3xl md:text-4xl font-bold mb-8 text-green-400">
@@ -304,21 +303,58 @@ const Index = () => {
 
       {/* Footer */}
       <footer className="bg-gray-900 py-12 px-4 border-t border-gray-800">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="flex justify-center space-x-8 mb-8">
-            <a href="#" className="text-gray-400 hover:text-green-400 transition-colors">
-              {currentContent.footer.terms}
-            </a>
-            <a href="#" className="text-gray-400 hover:text-green-400 transition-colors">
-              {currentContent.footer.privacy}
-            </a>
-            <a href="#" className="text-gray-400 hover:text-green-400 transition-colors">
-              {currentContent.footer.contact}
-            </a>
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-4 gap-8 mb-12">
+            {/* Brand */}
+            <div className="md:col-span-1">
+              <h3 className="text-xl font-bold text-green-400 mb-4">FastSEOHub.com</h3>
+              <p className="text-gray-400 text-sm mb-4">Created by Aimad Djeddi</p>
+              <div className="space-y-2 text-sm text-gray-400">
+                <p>Phone: 0665121272</p>
+                <p>Email: support@fastseohub.com</p>
+              </div>
+            </div>
+
+            {/* Quick Links */}
+            <div>
+              <h4 className="text-lg font-semibold text-white mb-4">{language === 'en' ? 'Quick Links' : 'Schnelle Links'}</h4>
+              <ul className="space-y-2 text-sm">
+                <li><a href="/features" className="text-gray-400 hover:text-green-400 transition-colors">Features</a></li>
+                <li><a href="/results" className="text-gray-400 hover:text-green-400 transition-colors">Results</a></li>
+                <li><a href="/pricing" className="text-gray-400 hover:text-green-400 transition-colors">Pricing</a></li>
+                <li><a href="/articles" className="text-gray-400 hover:text-green-400 transition-colors">Articles</a></li>
+                <li><a href="/affiliate-support" className="text-gray-400 hover:text-green-400 transition-colors">Affiliate Support</a></li>
+              </ul>
+            </div>
+
+            {/* Support */}
+            <div>
+              <h4 className="text-lg font-semibold text-white mb-4">Support</h4>
+              <ul className="space-y-2 text-sm">
+                <li><a href="/support" className="text-gray-400 hover:text-green-400 transition-colors">Support</a></li>
+                <li><a href="/faq" className="text-gray-400 hover:text-green-400 transition-colors">FAQ</a></li>
+                <li><a href="/contact" className="text-gray-400 hover:text-green-400 transition-colors">Contact</a></li>
+              </ul>
+            </div>
+
+            {/* Legal */}
+            <div>
+              <h4 className="text-lg font-semibold text-white mb-4">Legal</h4>
+              <ul className="space-y-2 text-sm">
+                <li><a href="/privacy-policy" className="text-gray-400 hover:text-green-400 transition-colors">{currentContent.footer.privacy}</a></li>
+                <li><a href="/terms" className="text-gray-400 hover:text-green-400 transition-colors">{currentContent.footer.terms}</a></li>
+                <li><a href="/legal" className="text-gray-400 hover:text-green-400 transition-colors">Legal Information</a></li>
+              </ul>
+            </div>
           </div>
           
-          <div className="text-gray-500 text-sm">
-            © 2024 Cognitive SEO Warfare. All rights reserved.
+          <div className="border-t border-gray-800 pt-8 text-center">
+            <div className="text-gray-500 text-sm mb-4">
+              © 2024 FastSEOHub.com - Cognitive SEO Warfare. All rights reserved.
+            </div>
+            <div className="text-sm text-gray-400">
+              Powered by Digistore24 • Secure Payment Processing
+            </div>
           </div>
         </div>
       </footer>
