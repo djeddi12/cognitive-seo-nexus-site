@@ -1,22 +1,12 @@
 
 import React from 'react';
-import { ArrowLeft, Users, DollarSign, TrendingUp, Download, Mail, Phone, Gift, BarChart, Globe, Shield } from 'lucide-react';
+import { ArrowLeft, Users, DollarSign, TrendingUp, Mail, Phone, Gift, BarChart, Globe, Shield } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
+import MarketingMaterials from '@/components/MarketingMaterials';
 
 const AffiliateSupport = () => {
-  const marketingMaterials = [
-    'High-Converting Landing Pages',
-    'Email Templates & Sequences', 
-    'Social Media Graphics & Posts',
-    'Banner Ads (Multiple Sizes)',
-    'Video Sales Letters',
-    'Product Images & Screenshots',
-    'Proven Sales Copy Templates',
-    'Bonus Materials & Lead Magnets'
-  ];
-
   const affiliateFeatures = [
     {
       title: "Real-Time Tracking",
@@ -163,31 +153,7 @@ const AffiliateSupport = () => {
       {/* Marketing Materials */}
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
-          <h3 className="text-3xl font-bold text-center mb-4 text-green-400">
-            Complete Marketing Arsenal
-          </h3>
-          <p className="text-center text-gray-300 mb-12 max-w-2xl mx-auto">
-            We provide everything you need to succeed. Professional marketing materials tested and optimized for maximum conversions.
-          </p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {marketingMaterials.map((material, index) => (
-              <Card key={index} className="bg-gray-800 border-gray-700 hover:border-green-400/50 transition-all duration-300">
-                <CardContent className="p-4 text-center">
-                  <Download className="w-6 h-6 mx-auto mb-2 text-green-400" />
-                  <p className="text-white text-sm font-medium">{material}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-          <div className="text-center mt-8">
-            <Button 
-              size="lg"
-              className="bg-green-600 hover:bg-green-500 text-white"
-            >
-              <Download className="w-5 h-5 mr-2" />
-              Access Marketing Materials
-            </Button>
-          </div>
+          <MarketingMaterials />
         </div>
       </section>
 
