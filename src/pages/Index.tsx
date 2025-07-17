@@ -168,7 +168,7 @@ const Index = () => {
   };
 
   const handleUpsellPurchase = () => {
-    window.open('https://drive.google.com/file/d/1WmJyIl9ma-XBqpOOcwEVJgfk1oD6NOJU/view?usp=drive_link', '_blank');
+    navigate('/thank-you-upsell');
   };
 
   return (
