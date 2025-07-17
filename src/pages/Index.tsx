@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { Brain, Zap, Eye, Shield, Target, Code, ChevronDown, Globe, Download, Star, Check, Book, Lock, Search } from 'lucide-react';
+import { Brain, Zap, Eye, Shield, Target, Code, ChevronDown, Globe, Download, Star, Check, Book, Lock, Search, Mail, Phone, MapPin, FileText, Scale, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 
 const Index = () => {
   const [language, setLanguage] = useState<'en' | 'de'>('en');
+  const [activeSection, setActiveSection] = useState<string>('');
 
   const content = {
     en: {
@@ -144,6 +145,10 @@ const Index = () => {
     }
   ];
 
+  const showSection = (section: string) => {
+    setActiveSection(activeSection === section ? '' : section);
+  };
+
   return (
     <div className="min-h-screen bg-gray-900 text-white overflow-x-hidden">
       {/* Language Switcher */}
@@ -170,7 +175,7 @@ const Index = () => {
           <div className="order-2 md:order-1 flex justify-center">
             <div className="relative">
               <img 
-                src="/lovable-uploads/3ec06ccf-4e23-4d12-a3c7-78913ccc941c.png" 
+                src="https://i.ibb.co/DH4m2KPh/cognitive-seo-warfare-book-cover.png" 
                 alt="Cognitive SEO Warfare Book Cover"
                 className="w-80 h-auto rounded-lg shadow-2xl shadow-green-600/30 hover:transform hover:scale-105 transition-all duration-300"
               />
@@ -268,6 +273,7 @@ const Index = () => {
               variant="outline" 
               size="lg"
               className="border-green-400 text-green-400 hover:bg-green-400 hover:text-gray-900 transition-all duration-300"
+              onClick={() => window.open('https://drive.google.com/file/d/1WmJyIl9ma-XBqpOOcwEVJgfk1oD6NOJU/view?usp=sharing', '_blank')}
             >
               <Book className="w-5 h-5 mr-2" />
               {currentContent.viewSample}
@@ -409,6 +415,313 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Footer Pages Sections */}
+      {activeSection && (
+        <section className="py-20 px-4 bg-gray-800/70">
+          <div className="max-w-4xl mx-auto">
+            <Button 
+              onClick={() => setActiveSection('')}
+              className="mb-8 bg-gray-700 hover:bg-gray-600 text-white"
+            >
+              ← Back to Main Page
+            </Button>
+            
+            {activeSection === 'faq' && (
+              <div>
+                <h2 className="text-4xl font-bold text-green-400 mb-12 text-center">
+                  Frequently Asked Questions
+                </h2>
+                <div className="space-y-6">
+                  <Card className="bg-gray-800 border-green-400/20">
+                    <CardContent className="p-6">
+                      <h3 className="text-xl font-semibold text-green-400 mb-3">
+                        What format is the book delivered in?
+                      </h3>
+                      <p className="text-gray-300">
+                        The book is delivered as a high-quality PDF file that you can download immediately after purchase. 
+                        You'll also receive access to bonus materials and templates.
+                      </p>
+                    </CardContent>
+                  </Card>
+                  
+                  <Card className="bg-gray-800 border-green-400/20">
+                    <CardContent className="p-6">
+                      <h3 className="text-xl font-semibold text-green-400 mb-3">
+                        Is there a money-back guarantee?
+                      </h3>
+                      <p className="text-gray-300">
+                        Yes, we offer a 30-day money-back guarantee. If you're not satisfied with the content, 
+                        contact us within 30 days for a full refund.
+                      </p>
+                    </CardContent>
+                  </Card>
+                  
+                  <Card className="bg-gray-800 border-green-400/20">
+                    <CardContent className="p-6">
+                      <h3 className="text-xl font-semibold text-green-400 mb-3">
+                        How quickly will I receive access?
+                      </h3>
+                      <p className="text-gray-300">
+                        Access is instant! Once your payment is processed by Digistore24, you'll immediately 
+                        receive download links via email and be redirected to the download page.
+                      </p>
+                    </CardContent>
+                  </Card>
+                  
+                  <Card className="bg-gray-800 border-green-400/20">
+                    <CardContent className="p-6">
+                      <h3 className="text-xl font-semibold text-green-400 mb-3">
+                        Are these techniques safe to use?
+                      </h3>
+                      <p className="text-gray-300">
+                        The techniques focus on understanding search psychology and user behavior. 
+                        They emphasize creating genuinely valuable content that resonates with both users and algorithms.
+                      </p>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
+            )}
+            
+            {activeSection === 'contact' && (
+              <div>
+                <h2 className="text-4xl font-bold text-green-400 mb-12 text-center">
+                  Contact Information
+                </h2>
+                <div className="grid md:grid-cols-2 gap-8">
+                  <Card className="bg-gray-800 border-green-400/20">
+                    <CardContent className="p-8">
+                      <div className="flex items-center mb-4">
+                        <Mail className="w-6 h-6 text-green-400 mr-3" />
+                        <h3 className="text-xl font-semibold text-white">Email Support</h3>
+                      </div>
+                      <p className="text-gray-300 mb-2">
+                        For product support and general inquiries:
+                      </p>
+                      <p className="text-green-400 font-semibold">
+                        support@fastseohub.com
+                      </p>
+                    </CardContent>
+                  </Card>
+                  
+                  <Card className="bg-gray-800 border-green-400/20">
+                    <CardContent className="p-8">
+                      <div className="flex items-center mb-4">
+                        <Phone className="w-6 h-6 text-green-400 mr-3" />
+                        <h3 className="text-xl font-semibold text-white">Phone Support</h3>
+                      </div>
+                      <p className="text-gray-300 mb-2">
+                        Direct contact for urgent matters:
+                      </p>
+                      <p className="text-green-400 font-semibold">
+                        0665121272
+                      </p>
+                    </CardContent>
+                  </Card>
+                  
+                  <Card className="bg-gray-800 border-green-400/20 md:col-span-2">
+                    <CardContent className="p-8">
+                      <div className="flex items-center mb-4">
+                        <Users className="w-6 h-6 text-green-400 mr-3" />
+                        <h3 className="text-xl font-semibold text-white">About the Creator</h3>
+                      </div>
+                      <p className="text-gray-300 mb-4">
+                        This product is created and maintained by Aimad Djeddi, an experienced SEO strategist 
+                        with over 10 years in the industry. All customer support is handled personally to 
+                        ensure the highest quality of service.
+                      </p>
+                      <p className="text-green-400 font-semibold">
+                        Response time: Usually within 24 hours
+                      </p>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
+            )}
+            
+            {activeSection === 'privacy' && (
+              <div>
+                <h2 className="text-4xl font-bold text-green-400 mb-12 text-center">
+                  Privacy Policy
+                </h2>
+                <Card className="bg-gray-800 border-green-400/20">
+                  <CardContent className="p-8">
+                    <div className="space-y-8">
+                      <section>
+                        <h3 className="text-2xl font-semibold text-green-400 mb-4">Information We Collect</h3>
+                        <p className="text-gray-300 mb-4">
+                          We collect information you provide directly to us, such as when you purchase our products, 
+                          create an account, or contact us for support.
+                        </p>
+                        <ul className="list-disc list-inside text-gray-300 space-y-2">
+                          <li>Name and email address</li>
+                          <li>Payment information (processed securely by Digistore24)</li>
+                          <li>Communication preferences</li>
+                          <li>Support inquiries and correspondence</li>
+                        </ul>
+                      </section>
+
+                      <section>
+                        <h3 className="text-2xl font-semibold text-green-400 mb-4">How We Use Your Information</h3>
+                        <ul className="list-disc list-inside text-gray-300 space-y-2">
+                          <li>To process and fulfill your orders</li>
+                          <li>To provide customer support</li>
+                          <li>To send you product updates and important notices</li>
+                          <li>To improve our products and services</li>
+                          <li>To comply with legal obligations</li>
+                        </ul>
+                      </section>
+
+                      <section>
+                        <h3 className="text-2xl font-semibold text-green-400 mb-4">Data Sharing</h3>
+                        <p className="text-gray-300 mb-4">
+                          We do not sell, trade, or otherwise transfer your personal information to third parties, 
+                          except as described in this policy:
+                        </p>
+                        <ul className="list-disc list-inside text-gray-300 space-y-2">
+                          <li>With Digistore24 for payment processing</li>
+                          <li>With service providers who assist in our operations</li>
+                          <li>When required by law or to protect our rights</li>
+                        </ul>
+                      </section>
+
+                      <section>
+                        <h3 className="text-2xl font-semibold text-green-400 mb-4">Contact Us</h3>
+                        <p className="text-gray-300">
+                          If you have questions about this Privacy Policy, please contact us at support@fastseohub.com
+                        </p>
+                      </section>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            )}
+            
+            {activeSection === 'terms' && (
+              <div>
+                <h2 className="text-4xl font-bold text-green-400 mb-12 text-center">
+                  Terms of Service
+                </h2>
+                <Card className="bg-gray-800 border-green-400/20">
+                  <CardContent className="p-8">
+                    <div className="space-y-8">
+                      <section>
+                        <h3 className="text-2xl font-semibold text-green-400 mb-4">Product Usage</h3>
+                        <p className="text-gray-300 mb-4">
+                          By purchasing "Cognitive SEO Warfare," you agree to use the content for lawful purposes only. 
+                          The strategies presented are for educational purposes and should be implemented responsibly.
+                        </p>
+                      </section>
+
+                      <section>
+                        <h3 className="text-2xl font-semibold text-green-400 mb-4">Refund Policy</h3>
+                        <p className="text-gray-300 mb-4">
+                          We offer a 30-day money-back guarantee from the date of purchase. Refunds are processed 
+                          through Digistore24 and may take 5-10 business days to appear in your account.
+                        </p>
+                      </section>
+
+                      <section>
+                        <h3 className="text-2xl font-semibold text-green-400 mb-4">Intellectual Property</h3>
+                        <p className="text-gray-300 mb-4">
+                          All content in this product is protected by copyright and is for personal use only. 
+                          Redistribution, sharing, or reselling of the content is strictly prohibited.
+                        </p>
+                      </section>
+
+                      <section>
+                        <h3 className="text-2xl font-semibold text-green-400 mb-4">Disclaimer</h3>
+                        <p className="text-gray-300 mb-4">
+                          Results may vary based on implementation and market conditions. We make no guarantees 
+                          about specific outcomes from using the strategies in this book.
+                        </p>
+                      </section>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            )}
+            
+            {activeSection === 'legal' && (
+              <div>
+                <h2 className="text-4xl font-bold text-green-400 mb-12 text-center">
+                  Legal Information
+                </h2>
+                <Card className="bg-gray-800 border-green-400/20">
+                  <CardContent className="p-8">
+                    <div className="space-y-8">
+                      <section>
+                        <h3 className="text-2xl font-semibold text-green-400 mb-4">Company Information</h3>
+                        <div className="space-y-4 text-gray-300">
+                          <div className="flex items-start space-x-3">
+                            <Users className="w-5 h-5 text-green-400 mt-1" />
+                            <div>
+                              <p className="font-semibold">Business Owner:</p>
+                              <p>Aimad Djeddi</p>
+                            </div>
+                          </div>
+                          
+                          <div className="flex items-start space-x-3">
+                            <MapPin className="w-5 h-5 text-green-400 mt-1" />
+                            <div>
+                              <p className="font-semibold">Business Address:</p>
+                              <p>Available upon request for legal purposes</p>
+                            </div>
+                          </div>
+                          
+                          <div className="flex items-start space-x-3">
+                            <FileText className="w-5 h-5 text-green-400 mt-1" />
+                            <div>
+                              <p className="font-semibold">VAT ID:</p>
+                              <p>Available upon request for business customers</p>
+                            </div>
+                          </div>
+                          
+                          <div className="flex items-start space-x-3">
+                            <Mail className="w-5 h-5 text-green-400 mt-1" />
+                            <div>
+                              <p className="font-semibold">Contact Email:</p>
+                              <p>support@fastseohub.com</p>
+                            </div>
+                          </div>
+                          
+                          <div className="flex items-start space-x-3">
+                            <Phone className="w-5 h-5 text-green-400 mt-1" />
+                            <div>
+                              <p className="font-semibold">Phone:</p>
+                              <p>0665121272</p>
+                            </div>
+                          </div>
+                        </div>
+                      </section>
+
+                      <section>
+                        <h3 className="text-2xl font-semibold text-green-400 mb-4">Payment Processing</h3>
+                        <div className="bg-gray-900/50 p-4 rounded-lg">
+                          <p className="text-yellow-400 font-semibold mb-2">Important Notice:</p>
+                          <p className="text-gray-300">
+                            The withdrawal from your account will be done by Digistore24. 
+                            All payments are processed securely through our payment partner Digistore24.
+                          </p>
+                        </div>
+                      </section>
+
+                      <section>
+                        <h3 className="text-2xl font-semibold text-green-400 mb-4">Regulatory Compliance</h3>
+                        <p className="text-gray-300 mb-4">
+                          This business operates in compliance with applicable consumer protection laws and 
+                          e-commerce regulations. All customer rights are protected according to local legislation.
+                        </p>
+                      </section>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            )}
+          </div>
+        </section>
+      )}
+
       {/* Footer */}
       <footer className="bg-gray-900 py-12 px-4 border-t border-gray-800">
         <div className="max-w-6xl mx-auto">
@@ -423,8 +736,22 @@ const Index = () => {
             <div>
               <h4 className="text-lg font-semibold text-white mb-4">Support</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="/faq" className="text-gray-400 hover:text-green-400 transition-colors">FAQ</a></li>
-                <li><a href="/contact" className="text-gray-400 hover:text-green-400 transition-colors">Contact</a></li>
+                <li>
+                  <button 
+                    onClick={() => showSection('faq')}
+                    className="text-gray-400 hover:text-green-400 transition-colors cursor-pointer"
+                  >
+                    FAQ
+                  </button>
+                </li>
+                <li>
+                  <button 
+                    onClick={() => showSection('contact')}
+                    className="text-gray-400 hover:text-green-400 transition-colors cursor-pointer"
+                  >
+                    Contact
+                  </button>
+                </li>
               </ul>
             </div>
 
@@ -432,9 +759,30 @@ const Index = () => {
             <div>
               <h4 className="text-lg font-semibold text-white mb-4">Legal</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="/privacy-policy" className="text-gray-400 hover:text-green-400 transition-colors">Privacy Policy</a></li>
-                <li><a href="/terms" className="text-gray-400 hover:text-green-400 transition-colors">Terms of Service</a></li>
-                <li><a href="/legal" className="text-gray-400 hover:text-green-400 transition-colors">Legal Information</a></li>
+                <li>
+                  <button 
+                    onClick={() => showSection('privacy')}
+                    className="text-gray-400 hover:text-green-400 transition-colors cursor-pointer"
+                  >
+                    Privacy Policy
+                  </button>
+                </li>
+                <li>
+                  <button 
+                    onClick={() => showSection('terms')}
+                    className="text-gray-400 hover:text-green-400 transition-colors cursor-pointer"
+                  >
+                    Terms of Service
+                  </button>
+                </li>
+                <li>
+                  <button 
+                    onClick={() => showSection('legal')}
+                    className="text-gray-400 hover:text-green-400 transition-colors cursor-pointer"
+                  >
+                    Legal Information
+                  </button>
+                </li>
               </ul>
             </div>
 
