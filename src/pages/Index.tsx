@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import { Brain, Zap, Eye, Shield, Target, Code, ChevronDown, Globe, Download, Star, Check, Book, Lock, Search, Mail, Phone, MapPin, FileText, Scale, Users, Gift } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import { useNavigate } from 'react-router-dom';
 
 const Index = () => {
   const [language, setLanguage] = useState<'en' | 'de'>('en');
   const [activeSection, setActiveSection] = useState<string>('');
+  const navigate = useNavigate();
 
   const content = {
     en: {
@@ -161,6 +163,14 @@ const Index = () => {
     setActiveSection(activeSection === section ? '' : section);
   };
 
+  const handleMainBookPurchase = () => {
+    navigate('/thank-you');
+  };
+
+  const handleUpsellPurchase = () => {
+    window.open('https://drive.google.com/file/d/1WmJyIl9ma-XBqpOOcwEVJgfk1oD6NOJU/view?usp=drive_link', '_blank');
+  };
+
   return (
     <div className="min-h-screen bg-gray-900 text-white overflow-x-hidden">
       {/* Language Switcher */}
@@ -219,6 +229,7 @@ const Index = () => {
               size="lg" 
               className="bg-green-600 hover:bg-green-500 text-white px-8 py-4 text-lg font-bold rounded-lg transform hover:scale-105 transition-all duration-300 animate-fade-in shadow-lg shadow-green-600/25"
               style={{animationDelay: '0.6s'}}
+              onClick={handleMainBookPurchase}
             >
               <Download className="w-5 h-5 mr-2" />
               {currentContent.buyNow}
@@ -278,18 +289,6 @@ const Index = () => {
                 </CardContent>
               </Card>
             ))}
-          </div>
-          
-          <div className="text-center mt-12">
-            <Button 
-              variant="outline" 
-              size="lg"
-              className="border-green-400 text-green-400 hover:bg-green-400 hover:text-gray-900 transition-all duration-300"
-              onClick={() => window.open('https://drive.google.com/file/d/10FeyE0DjvfVS0Y5wj4naMDezlPdwRANX/view?usp=drive_link', '_blank')}
-            >
-              <Book className="w-5 h-5 mr-2" />
-              {currentContent.viewSample}
-            </Button>
           </div>
         </div>
       </section>
@@ -398,7 +397,7 @@ const Index = () => {
               <Button 
                 size="lg" 
                 className="w-full bg-yellow-600 hover:bg-yellow-500 text-white py-4 text-lg font-bold rounded-lg transform hover:scale-105 transition-all duration-300 shadow-lg shadow-yellow-600/25 mb-4"
-                onClick={() => window.open('https://drive.google.com/file/d/1WmJyIl9ma-XBqpOOcwEVJgfk1oD6NOJU/view?usp=drive_link', '_blank')}
+                onClick={handleUpsellPurchase}
               >
                 <Download className="w-5 h-5 mr-2" />
                 {currentContent.upsellBuyNow}
@@ -440,6 +439,7 @@ const Index = () => {
               <Button 
                 size="lg" 
                 className="w-full bg-green-600 hover:bg-green-500 text-white py-4 text-lg font-bold rounded-lg transform hover:scale-105 transition-all duration-300 shadow-lg shadow-green-600/25 mb-4"
+                onClick={handleMainBookPurchase}
               >
                 <Download className="w-5 h-5 mr-2" />
                 {currentContent.downloadNow}
