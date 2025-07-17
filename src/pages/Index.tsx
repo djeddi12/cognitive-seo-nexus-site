@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Brain, Zap, Eye, Shield, Target, Code, ChevronDown, Globe, Download, Star, Check, Book, Lock, Search, Mail, Phone, MapPin, FileText, Scale, Users } from 'lucide-react';
+import { Brain, Zap, Eye, Shield, Target, Code, ChevronDown, Globe, Download, Star, Check, Book, Lock, Search, Mail, Phone, MapPin, FileText, Scale, Users, Gift } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -47,6 +47,11 @@ const Index = () => {
       ],
       pricingTitle: "Get Instant Access",
       pricingText: "Secure your copy now for €39 – Instant PDF download with bonus materials",
+      upsellTitle: "EXCLUSIVE UPSELL: The Million Dollar Journey",
+      upsellSubtitle: "Take Your Business to the Next Level",
+      upsellDescription: "The complete roadmap to building a million-dollar online empire using advanced SEO strategies and business psychology.",
+      upsellPrice: "$20",
+      upsellBuyNow: "Add to Cart - Only $20",
       instantDownload: "Instant PDF Download",
       moneyBack: "30-Day Money Back Guarantee",
       securePayment: "Secure Payment via Digistore24",
@@ -58,6 +63,7 @@ const Index = () => {
       ],
       deliveryTitle: "Instant Delivery After Purchase",
       deliveryText: "Get immediate access to your digital copy plus all bonus materials",
+      paymentNotice: "The withdrawal from your account will be done by Digistore24",
       footer: {
         terms: "Terms & Conditions",
         privacy: "Privacy Policy", 
@@ -103,6 +109,11 @@ const Index = () => {
       ],
       pricingTitle: "Sofortigen Zugang erhalten",
       pricingText: "Sichern Sie sich Ihre Kopie jetzt für 39 € – Sofortiger PDF-Download mit Bonusmaterialien",
+      upsellTitle: "EXKLUSIVES UPSELL: The Million Dollar Journey",
+      upsellSubtitle: "Bringen Sie Ihr Geschäft auf die nächste Stufe",
+      upsellDescription: "Der komplette Fahrplan zum Aufbau eines millionenschweren Online-Imperiums mit fortgeschrittenen SEO-Strategien und Geschäftspsychologie.",
+      upsellPrice: "20 $",
+      upsellBuyNow: "In den Warenkorb - Nur 20 $",
       instantDownload: "Sofortiger PDF-Download",
       moneyBack: "30-Tage Geld-zurück-Garantie",
       securePayment: "Sichere Zahlung über Digistore24",
@@ -114,6 +125,7 @@ const Index = () => {
       ],
       deliveryTitle: "Sofortige Lieferung nach dem Kauf",
       deliveryText: "Erhalten Sie sofortigen Zugang zu Ihrer digitalen Kopie plus alle Bonusmaterialien",
+      paymentNotice: "Die Abbuchung von Ihrem Konto wird von Digistore24 durchgeführt",
       footer: {
         terms: "AGB",
         privacy: "Datenschutz",
@@ -273,7 +285,7 @@ const Index = () => {
               variant="outline" 
               size="lg"
               className="border-green-400 text-green-400 hover:bg-green-400 hover:text-gray-900 transition-all duration-300"
-              onClick={() => window.open('https://drive.google.com/file/d/1WmJyIl9ma-XBqpOOcwEVJgfk1oD6NOJU/view?usp=sharing', '_blank')}
+              onClick={() => window.open('https://drive.google.com/file/d/10FeyE0DjvfVS0Y5wj4naMDezlPdwRANX/view?usp=drive_link', '_blank')}
             >
               <Book className="w-5 h-5 mr-2" />
               {currentContent.viewSample}
@@ -365,6 +377,39 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Upsell Section */}
+      <section className="py-20 px-4 bg-gradient-to-br from-yellow-900/20 via-gray-800 to-green-900/20">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="mb-8">
+            <Gift className="w-16 h-16 mx-auto text-yellow-400 mb-4" />
+            <h3 className="text-3xl md:text-4xl font-bold mb-4 text-yellow-400">
+              {currentContent.upsellTitle}
+            </h3>
+            <p className="text-xl text-gray-300 mb-6">
+              {currentContent.upsellSubtitle}
+            </p>
+          </div>
+          
+          <Card className="bg-gray-800 border-yellow-400/30 max-w-md mx-auto mb-8">
+            <CardContent className="p-8">
+              <div className="text-4xl font-bold text-yellow-400 mb-4">{currentContent.upsellPrice}</div>
+              <p className="text-lg text-gray-300 mb-6">{currentContent.upsellDescription}</p>
+              
+              <Button 
+                size="lg" 
+                className="w-full bg-yellow-600 hover:bg-yellow-500 text-white py-4 text-lg font-bold rounded-lg transform hover:scale-105 transition-all duration-300 shadow-lg shadow-yellow-600/25 mb-4"
+                onClick={() => window.open('https://drive.google.com/file/d/1WmJyIl9ma-XBqpOOcwEVJgfk1oD6NOJU/view?usp=drive_link', '_blank')}
+              >
+                <Download className="w-5 h-5 mr-2" />
+                {currentContent.upsellBuyNow}
+              </Button>
+              
+              <p className="text-sm text-gray-400">Limited time offer - Add to your main purchase</p>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
       {/* Pricing Section */}
       <section className="py-20 px-4 bg-gray-800/50">
         <div className="max-w-4xl mx-auto text-center">
@@ -406,7 +451,10 @@ const Index = () => {
             <h4 className="text-xl font-bold text-green-400 mb-4">
               {currentContent.deliveryTitle}
             </h4>
-            <p className="text-gray-300">{currentContent.deliveryText}</p>
+            <p className="text-gray-300 mb-4">{currentContent.deliveryText}</p>
+            <p className="text-yellow-400 font-semibold text-sm">
+              {currentContent.paymentNotice}
+            </p>
           </div>
           
           <div className="text-sm text-gray-400">
