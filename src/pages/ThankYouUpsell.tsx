@@ -79,10 +79,10 @@ const ThankYouUpsell = () => {
                 Payment Information
               </h3>
               <p className="text-gray-300 mb-2">
-                <span className="font-semibold">Payment processed by:</span> Digistore24
+                <span className="font-semibold">Your credit card statement will show a charge from Digistore24</span>
               </p>
               <p className="text-gray-300 text-sm">
-                The withdrawal from your account will be done by Digistore24
+                Payment processed securely by Digistore24 Inc. (United States)
               </p>
             </CardContent>
           </Card>
@@ -129,6 +129,13 @@ const ThankYouUpsell = () => {
             >
               Contact our support team
             </a>
+          </div>
+
+          {/* Digistore24 Badge Placeholder */}
+          <div className="mt-8 p-4 bg-gray-800/30 rounded-lg border border-gray-700">
+            <p className="text-sm text-gray-400">
+              [Digistore24 Thank You Badge - Add your official badge here]
+            </p>
           </div>
         </div>
       </div>
