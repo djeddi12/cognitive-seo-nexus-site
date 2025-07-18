@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Brain, Zap, Eye, Shield, Target, Code, ChevronDown, Globe, Download, Star, Check, Book, Lock, Search, Mail, Phone, MapPin, FileText, Scale, Users, Calendar, Clock, Award } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -186,8 +187,8 @@ const Index = () => {
   };
 
   const handlePurchase = () => {
-    // Replace this URL with your actual Digistore24 product checkout URL
-    window.open('https://www.digistore24.com/product/YOURPRODUCTID', '_blank');
+    // Updated to use the official Digistore24 checkout URL
+    window.open('https://www.digistore24.com/product/624483', '_blank');
   };
 
   return (
@@ -284,12 +285,14 @@ const Index = () => {
             </div>
           </div>
           
-          {/* Digistore24 Badge Placeholder */}
+          {/* Official Digistore24 Sales Badge */}
           <div className="mt-8 text-center">
-            <div className="inline-block p-4 bg-gray-800/50 rounded-lg border border-gray-700">
-              <p className="text-sm text-gray-400">
-                [Digistore24 Sales Page Badge - Add your official badge here]
-              </p>
+            <div className="inline-block">
+              <img 
+                src="https://i.ibb.co/Q3vM3RWL/digistore24-badge.png" 
+                alt="Secured by Digistore24"
+                className="h-16 mx-auto"
+              />
             </div>
           </div>
         </div>
@@ -681,15 +684,17 @@ const Index = () => {
               <div className="text-gray-500 text-sm mb-2">
                 © 2024 FastSEOHub.com - Cognitive SEO Warfare. All rights reserved.
               </div>
-              <div className="text-sm text-gray-400">
+              <div className="text-sm text-gray-400 mb-4">
                 Powered by Digistore24 • Secure Payment Processing
               </div>
               
-              {/* Digistore24 Footer Badge Placeholder */}
-              <div className="inline-block p-3 bg-gray-800/30 rounded-lg border border-gray-700">
-                <p className="text-xs text-gray-400">
-                  [Digistore24 Footer Badge - Add your official badge here]
-                </p>
+              {/* Official Digistore24 Footer Badge */}
+              <div className="flex justify-center">
+                <img 
+                  src="https://i.ibb.co/Q3vM3RWL/digistore24-badge.png" 
+                  alt="Secured by Digistore24"
+                  className="h-12"
+                />
               </div>
             </div>
           </div>

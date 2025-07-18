@@ -131,11 +131,13 @@ const ThankYou = () => {
             </a>
           </div>
 
-          {/* Digistore24 Thank You Badge Placeholder */}
-          <div className="mt-8 p-4 bg-gray-800/30 rounded-lg border border-gray-700">
-            <p className="text-sm text-gray-400">
-              [Digistore24 Thank You Badge - Add your official badge here]
-            </p>
+          {/* Official Digistore24 Thank You Badge */}
+          <div className="mt-8 flex justify-center">
+            <img 
+              src="https://i.ibb.co/Q3vM3RWL/digistore24-badge.png" 
+              alt="Secured by Digistore24"
+              className="h-16"
+            />
           </div>
         </div>
       </div>
