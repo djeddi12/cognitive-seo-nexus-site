@@ -64,7 +64,7 @@ const ThankYou = () => {
                 
                 <div className="space-y-3">
                   <Shield className="w-8 h-8 text-green-400 mx-auto" />
-                  <h3 className="font-semibold text-white">30-Day Guarantee</h3>
+                  <h3 className="font-semibold text-white">60-Day Guarantee</h3>
                   <p className="text-sm text-gray-300">
                     Full refund if not satisfied
                   </p>
@@ -131,7 +131,7 @@ const ThankYou = () => {
             </a>
           </div>
 
-          {/* Digistore24 Badge Placeholder */}
+          {/* Digistore24 Thank You Badge Placeholder */}
           <div className="mt-8 p-4 bg-gray-800/30 rounded-lg border border-gray-700">
             <p className="text-sm text-gray-400">
               [Digistore24 Thank You Badge - Add your official badge here]

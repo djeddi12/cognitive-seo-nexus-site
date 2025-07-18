@@ -1,21 +1,18 @@
 import React, { useState } from 'react';
-import { Brain, Zap, Eye, Shield, Target, Code, ChevronDown, Globe, Download, Star, Check, Book, Lock, Search, Mail, Phone, MapPin, FileText, Scale, Users, Gift } from 'lucide-react';
+import { Brain, Zap, Eye, Shield, Target, Code, ChevronDown, Globe, Download, Star, Check, Book, Lock, Search, Mail, Phone, MapPin, FileText, Scale, Users, Calendar, Clock, Award } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { useNavigate } from 'react-router-dom';
 
 const Index = () => {
   const [language, setLanguage] = useState<'en' | 'de'>('en');
   const [activeSection, setActiveSection] = useState<string>('');
-  const navigate = useNavigate();
 
   const content = {
     en: {
       heroTitle: "COGNITIVE SEO WARFARE",
       heroSubtitle: "The Psychology-Based Framework to Hijack Search Algorithms",
       heroDescription: "A secret SEO training Google doesn't want you to read.",
-      buyNow: "Buy Now - Instant Download",
-      downloadNow: "Download Your Copy Now",
+      buyNow: "Buy Now - €39",
       aboutTitle: "About the Book",
       aboutText: "Discover 60 pages of forbidden SEO tactics across 10 exclusive modules. This underground manual reveals advanced psychological strategies that exploit search algorithm weaknesses using cognitive science and neural manipulation techniques.",
       learnTitle: "What You'll Master",
@@ -29,7 +26,6 @@ const Index = () => {
       ],
       previewTitle: "Exclusive Book Excerpts",
       previewSubtitle: "Get a glimpse into the forbidden knowledge that will transform your SEO approach",
-      viewSample: "View Full Sample Chapter",
       authorTitle: "About the Author",
       authorText: "Created by an underground SEO strategist with 10+ years of experience manipulating search algorithms and dominating competitive niches using advanced psychological warfare techniques.",
       testimonialsTitle: "What Readers Say",
@@ -49,13 +45,8 @@ const Index = () => {
       ],
       pricingTitle: "Get Instant Access",
       pricingText: "Secure your copy now for €39 – Instant PDF download with bonus materials",
-      upsellTitle: "EXCLUSIVE UPSELL: The Million Dollar Journey",
-      upsellSubtitle: "Take Your Business to the Next Level",
-      upsellDescription: "The complete roadmap to building a million-dollar online empire using advanced SEO strategies and business psychology.",
-      upsellPrice: "$20",
-      upsellBuyNow: "Add to Cart - Only $20",
       instantDownload: "Instant PDF Download",
-      moneyBack: "30-Day Money Back Guarantee",
+      moneyBack: "60-Day Money Back Guarantee",
       securePayment: "Secure Payment via Digistore24",
       bonusTitle: "Exclusive Bonuses Included",
       bonuses: [
@@ -66,6 +57,25 @@ const Index = () => {
       deliveryTitle: "Instant Delivery After Purchase",
       deliveryText: "Get immediate access to your digital copy plus all bonus materials",
       paymentNotice: "The withdrawal from your account will be done by Digistore24",
+      returnPolicy: "60-Day Money Back Guarantee - If you're not completely satisfied with your purchase, request a full refund within 60 days of purchase.",
+      blogTitle: "Expert SEO Insights",
+      blogArticles: [
+        {
+          title: "The Psychology Behind Search Algorithm Behavior",
+          excerpt: "Understanding how search engines think and process information is crucial for advanced SEO strategies. Learn the cognitive patterns that drive algorithmic decisions.",
+          readTime: "5 min read"
+        },
+        {
+          title: "Advanced Semantic SEO Techniques That Work",
+          excerpt: "Discover how semantic relationships and entity-based optimization can dramatically improve your search visibility and ranking performance.",
+          readTime: "7 min read"
+        },
+        {
+          title: "Authority Building Through Cognitive Triggers",
+          excerpt: "Master the psychological principles that establish domain authority and trust signals that search engines recognize and reward.",
+          readTime: "6 min read"
+        }
+      ],
       footer: {
         terms: "Terms & Conditions",
         privacy: "Privacy Policy", 
@@ -76,8 +86,7 @@ const Index = () => {
       heroTitle: "KOGNITIVE SEO-KRIEGSFÜHRUNG",
       heroSubtitle: "Das psychologisch fundierte System, um Suchalgorithmen zu manipulieren",
       heroDescription: "Ein geheimes SEO-Training, das Google nicht will, dass Sie es lesen.",
-      buyNow: "Jetzt kaufen - Sofortiger Download",
-      downloadNow: "Laden Sie Ihre Kopie jetzt herunter",
+      buyNow: "Jetzt kaufen - €39",
       aboutTitle: "Über das Buch",
       aboutText: "Entdecken Sie 60 Seiten verbotener SEO-Taktiken in 10 exklusiven Modulen. Dieses Untergrund-Handbuch enthüllt fortgeschrittene psychologische Strategien, die Schwächen von Suchalgorithmen mit kognitiven Wissenschaften und neuraler Manipulation ausnutzen.",
       learnTitle: "Was Sie beherrschen werden",
@@ -91,7 +100,6 @@ const Index = () => {
       ],
       previewTitle: "Exklusive Buchauszüge",
       previewSubtitle: "Erhalten Sie einen Einblick in das verbotene Wissen, das Ihren SEO-Ansatz transformieren wird",
-      viewSample: "Vollständiges Beispielkapitel ansehen",
       authorTitle: "Über den Autor",
       authorText: "Geschrieben von einem Untergrund-SEO-Strategen mit über 10 Jahren Erfahrung in der Manipulation von Suchalgorithmen und der Dominierung konkurrenzfähiger Nischen mit fortgeschrittenen psychologischen Kriegsführungstechniken.",
       testimonialsTitle: "Was Leser sagen",
@@ -111,13 +119,8 @@ const Index = () => {
       ],
       pricingTitle: "Sofortigen Zugang erhalten",
       pricingText: "Sichern Sie sich Ihre Kopie jetzt für 39 € – Sofortiger PDF-Download mit Bonusmaterialien",
-      upsellTitle: "EXKLUSIVES UPSELL: The Million Dollar Journey",
-      upsellSubtitle: "Bringen Sie Ihr Geschäft auf die nächste Stufe",
-      upsellDescription: "Der komplette Fahrplan zum Aufbau eines millionenschweren Online-Imperiums mit fortgeschrittenen SEO-Strategien und Geschäftspsychologie.",
-      upsellPrice: "20 $",
-      upsellBuyNow: "In den Warenkorb - Nur 20 $",
       instantDownload: "Sofortiger PDF-Download",
-      moneyBack: "30-Tage Geld-zurück-Garantie",
+      moneyBack: "60-Tage Geld-zurück-Garantie",
       securePayment: "Sichere Zahlung über Digistore24",
       bonusTitle: "Exklusive Boni enthalten",
       bonuses: [
@@ -128,6 +131,25 @@ const Index = () => {
       deliveryTitle: "Sofortige Lieferung nach dem Kauf",
       deliveryText: "Erhalten Sie sofortigen Zugang zu Ihrer digitalen Kopie plus alle Bonusmaterialien",
       paymentNotice: "Die Abbuchung von Ihrem Konto wird von Digistore24 durchgeführt",
+      returnPolicy: "60-Tage Geld-zurück-Garantie - Falls Sie mit Ihrem Kauf nicht vollständig zufrieden sind, fordern Sie innerhalb von 60 Tagen nach dem Kauf eine vollständige Rückerstattung an.",
+      blogTitle: "Experten SEO Einblicke",
+      blogArticles: [
+        {
+          title: "Die Psychologie hinter Suchalgorithmus-Verhalten",
+          excerpt: "Das Verständnis dafür, wie Suchmaschinen denken und Informationen verarbeiten, ist entscheidend für fortgeschrittene SEO-Strategien.",
+          readTime: "5 Min. Lesezeit"
+        },
+        {
+          title: "Fortgeschrittene semantische SEO-Techniken die funktionieren",
+          excerpt: "Entdecken Sie, wie semantische Beziehungen und entitätsbasierte Optimierung Ihre Suchsichtbarkeit dramatisch verbessern können.",
+          readTime: "7 Min. Lesezeit"
+        },
+        {
+          title: "Autoritätsaufbau durch kognitive Trigger",
+          excerpt: "Meistern Sie die psychologischen Prinzipien, die Domain-Autorität und Vertrauenssignale etablieren.",
+          readTime: "6 Min. Lesezeit"
+        }
+      ],
       footer: {
         terms: "AGB",
         privacy: "Datenschutz",
@@ -163,12 +185,9 @@ const Index = () => {
     setActiveSection(activeSection === section ? '' : section);
   };
 
-  const handleMainBookPurchase = () => {
-    navigate('/thank-you');
-  };
-
-  const handleUpsellPurchase = () => {
-    navigate('/thank-you-upsell');
+  const handlePurchase = () => {
+    // Replace this URL with your actual Digistore24 product checkout URL
+    window.open('https://www.digistore24.com/product/YOURPRODUCTID', '_blank');
   };
 
   return (
@@ -229,11 +248,49 @@ const Index = () => {
               size="lg" 
               className="bg-green-600 hover:bg-green-500 text-white px-8 py-4 text-lg font-bold rounded-lg transform hover:scale-105 transition-all duration-300 animate-fade-in shadow-lg shadow-green-600/25"
               style={{animationDelay: '0.6s'}}
-              onClick={handleMainBookPurchase}
+              onClick={handlePurchase}
             >
               <Download className="w-5 h-5 mr-2" />
               {currentContent.buyNow}
             </Button>
+            
+            <div className="mt-6 text-sm text-gray-400">
+              <Shield className="w-4 h-4 inline mr-2" />
+              {currentContent.moneyBack} | Secure Payment via Digistore24
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Trust Badges Section */}
+      <section className="py-12 px-4 bg-gray-800/30">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-4 gap-6 text-center">
+            <div className="flex flex-col items-center">
+              <Shield className="w-8 h-8 text-green-400 mb-2" />
+              <p className="text-sm text-gray-300">Secure Payment</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <Download className="w-8 h-8 text-green-400 mb-2" />
+              <p className="text-sm text-gray-300">Instant Download</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <Clock className="w-8 h-8 text-green-400 mb-2" />
+              <p className="text-sm text-gray-300">60-Day Guarantee</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <Award className="w-8 h-8 text-green-400 mb-2" />
+              <p className="text-sm text-gray-300">Professional Quality</p>
+            </div>
+          </div>
+          
+          {/* Digistore24 Badge Placeholder */}
+          <div className="mt-8 text-center">
+            <div className="inline-block p-4 bg-gray-800/50 rounded-lg border border-gray-700">
+              <p className="text-sm text-gray-400">
+                [Digistore24 Sales Page Badge - Add your official badge here]
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -250,8 +307,44 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Book Excerpts Section */}
+      {/* Blog Articles Section */}
       <section className="py-20 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h3 className="text-3xl md:text-4xl font-bold mb-4 text-green-400">
+              {currentContent.blogTitle}
+            </h3>
+            <p className="text-lg text-gray-300">
+              Learn from our expert insights and advanced SEO strategies
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            {currentContent.blogArticles.map((article, index) => (
+              <Card key={index} className="bg-gray-800 border-green-400/20 hover:border-green-400/50 transition-all duration-300">
+                <CardContent className="p-6">
+                  <div className="flex items-center mb-4">
+                    <Book className="w-5 h-5 text-green-400 mr-2" />
+                    <span className="text-sm text-gray-400">{article.readTime}</span>
+                  </div>
+                  <h4 className="text-xl font-bold text-white mb-3">{article.title}</h4>
+                  <p className="text-gray-300 mb-4">{article.excerpt}</p>
+                  <Button 
+                    variant="outline" 
+                    size="sm"
+                    className="border-green-400 text-green-400 hover:bg-green-400 hover:text-gray-900"
+                  >
+                    Read More
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Book Excerpts Section */}
+      <section className="py-20 px-4 bg-gray-800/50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h3 className="text-3xl md:text-4xl font-bold mb-4 text-green-400">
@@ -294,7 +387,7 @@ const Index = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 bg-gray-800/50">
+      <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <h3 className="text-3xl md:text-4xl font-bold text-center mb-16 text-green-400">
             {currentContent.learnTitle}
@@ -321,7 +414,7 @@ const Index = () => {
       </section>
 
       {/* Author Section */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4 bg-gray-800/50">
         <div className="max-w-4xl mx-auto text-center">
           <h3 className="text-3xl md:text-4xl font-bold mb-8 text-green-400">
             {currentContent.authorTitle}
@@ -333,7 +426,7 @@ const Index = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 px-4 bg-gray-800/50">
+      <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <h3 className="text-3xl md:text-4xl font-bold text-center mb-16 text-green-400">
             {currentContent.testimonialsTitle}
@@ -358,7 +451,7 @@ const Index = () => {
       </section>
 
       {/* Bonus Section */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4 bg-gray-800/50">
         <div className="max-w-4xl mx-auto text-center">
           <h3 className="text-3xl md:text-4xl font-bold mb-8 text-green-400">
             {currentContent.bonusTitle}
@@ -376,41 +469,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Upsell Section */}
-      <section className="py-20 px-4 bg-gradient-to-br from-yellow-900/20 via-gray-800 to-green-900/20">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="mb-8">
-            <Gift className="w-16 h-16 mx-auto text-yellow-400 mb-4" />
-            <h3 className="text-3xl md:text-4xl font-bold mb-4 text-yellow-400">
-              {currentContent.upsellTitle}
-            </h3>
-            <p className="text-xl text-gray-300 mb-6">
-              {currentContent.upsellSubtitle}
-            </p>
-          </div>
-          
-          <Card className="bg-gray-800 border-yellow-400/30 max-w-md mx-auto mb-8">
-            <CardContent className="p-8">
-              <div className="text-4xl font-bold text-yellow-400 mb-4">{currentContent.upsellPrice}</div>
-              <p className="text-lg text-gray-300 mb-6">{currentContent.upsellDescription}</p>
-              
-              <Button 
-                size="lg" 
-                className="w-full bg-yellow-600 hover:bg-yellow-500 text-white py-4 text-lg font-bold rounded-lg transform hover:scale-105 transition-all duration-300 shadow-lg shadow-yellow-600/25 mb-4"
-                onClick={handleUpsellPurchase}
-              >
-                <Download className="w-5 h-5 mr-2" />
-                {currentContent.upsellBuyNow}
-              </Button>
-              
-              <p className="text-sm text-gray-400">Limited time offer - Add to your main purchase</p>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
-
       {/* Pricing Section */}
-      <section className="py-20 px-4 bg-gray-800/50">
+      <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h3 className="text-3xl md:text-4xl font-bold mb-8 text-green-400">
             {currentContent.pricingTitle}
@@ -439,10 +499,10 @@ const Index = () => {
               <Button 
                 size="lg" 
                 className="w-full bg-green-600 hover:bg-green-500 text-white py-4 text-lg font-bold rounded-lg transform hover:scale-105 transition-all duration-300 shadow-lg shadow-green-600/25 mb-4"
-                onClick={handleMainBookPurchase}
+                onClick={handlePurchase}
               >
                 <Download className="w-5 h-5 mr-2" />
-                {currentContent.downloadNow}
+                {currentContent.buyNow}
               </Button>
             </CardContent>
           </Card>
@@ -455,6 +515,15 @@ const Index = () => {
             <p className="text-yellow-400 font-semibold text-sm">
               {currentContent.paymentNotice}
             </p>
+          </div>
+
+          {/* Return Policy */}
+          <div className="bg-gray-800/50 rounded-lg p-6 max-w-2xl mx-auto mb-8">
+            <h4 className="text-xl font-bold text-green-400 mb-4 flex items-center justify-center">
+              <Scale className="w-6 h-6 mr-2" />
+              Return Policy
+            </h4>
+            <p className="text-gray-300">{currentContent.returnPolicy}</p>
           </div>
           
           <div className="text-sm text-gray-400">
@@ -474,298 +543,60 @@ const Index = () => {
               ← Back to Main Page
             </Button>
             
-            {activeSection === 'faq' && (
-              <div>
-                <h2 className="text-4xl font-bold text-green-400 mb-12 text-center">
-                  Frequently Asked Questions
-                </h2>
-                <div className="space-y-6">
-                  <Card className="bg-gray-800 border-green-400/20">
-                    <CardContent className="p-6">
-                      <h3 className="text-xl font-semibold text-green-400 mb-3">
-                        What format is the book delivered in?
-                      </h3>
-                      <p className="text-gray-300">
-                        The book is delivered as a high-quality PDF file that you can download immediately after purchase. 
-                        You'll also receive access to bonus materials and templates.
-                      </p>
-                    </CardContent>
-                  </Card>
-                  
-                  <Card className="bg-gray-800 border-green-400/20">
-                    <CardContent className="p-6">
-                      <h3 className="text-xl font-semibold text-green-400 mb-3">
-                        Is there a money-back guarantee?
-                      </h3>
-                      <p className="text-gray-300">
-                        Yes, we offer a 30-day money-back guarantee. If you're not satisfied with the content, 
-                        contact us within 30 days for a full refund.
-                      </p>
-                    </CardContent>
-                  </Card>
-                  
-                  <Card className="bg-gray-800 border-green-400/20">
-                    <CardContent className="p-6">
-                      <h3 className="text-xl font-semibold text-green-400 mb-3">
-                        How quickly will I receive access?
-                      </h3>
-                      <p className="text-gray-300">
-                        Access is instant! Once your payment is processed by Digistore24, you'll immediately 
-                        receive download links via email and be redirected to the download page.
-                      </p>
-                    </CardContent>
-                  </Card>
-                  
-                  <Card className="bg-gray-800 border-green-400/20">
-                    <CardContent className="p-6">
-                      <h3 className="text-xl font-semibold text-green-400 mb-3">
-                        Are these techniques safe to use?
-                      </h3>
-                      <p className="text-gray-300">
-                        The techniques focus on understanding search psychology and user behavior. 
-                        They emphasize creating genuinely valuable content that resonates with both users and algorithms.
-                      </p>
-                    </CardContent>
-                  </Card>
-                </div>
-              </div>
-            )}
-            
-            {activeSection === 'contact' && (
-              <div>
-                <h2 className="text-4xl font-bold text-green-400 mb-12 text-center">
-                  Contact Information
-                </h2>
-                <div className="grid md:grid-cols-2 gap-8">
-                  <Card className="bg-gray-800 border-green-400/20">
-                    <CardContent className="p-8">
-                      <div className="flex items-center mb-4">
-                        <Mail className="w-6 h-6 text-green-400 mr-3" />
-                        <h3 className="text-xl font-semibold text-white">Email Support</h3>
-                      </div>
-                      <p className="text-gray-300 mb-2">
-                        For product support and general inquiries:
-                      </p>
-                      <p className="text-green-400 font-semibold">
-                        support@fastseohub.com
-                      </p>
-                    </CardContent>
-                  </Card>
-                  
-                  <Card className="bg-gray-800 border-green-400/20">
-                    <CardContent className="p-8">
-                      <div className="flex items-center mb-4">
-                        <Phone className="w-6 h-6 text-green-400 mr-3" />
-                        <h3 className="text-xl font-semibold text-white">Phone Support</h3>
-                      </div>
-                      <p className="text-gray-300 mb-2">
-                        Direct contact for urgent matters:
-                      </p>
-                      <p className="text-green-400 font-semibold">
-                        0665121272
-                      </p>
-                    </CardContent>
-                  </Card>
-                  
-                  <Card className="bg-gray-800 border-green-400/20 md:col-span-2">
-                    <CardContent className="p-8">
-                      <div className="flex items-center mb-4">
-                        <Users className="w-6 h-6 text-green-400 mr-3" />
-                        <h3 className="text-xl font-semibold text-white">About the Creator</h3>
-                      </div>
-                      <p className="text-gray-300 mb-4">
-                        This product is created and maintained by Aimad Djeddi, an experienced SEO strategist 
-                        with over 10 years in the industry. All customer support is handled personally to 
-                        ensure the highest quality of service.
-                      </p>
-                      <p className="text-green-400 font-semibold">
-                        Response time: Usually within 24 hours
-                      </p>
-                    </CardContent>
-                  </Card>
-                </div>
-              </div>
-            )}
-            
-            {activeSection === 'privacy' && (
-              <div>
-                <h2 className="text-4xl font-bold text-green-400 mb-12 text-center">
-                  Privacy Policy
-                </h2>
+            <div>
+              <h2 className="text-4xl font-bold text-green-400 mb-12 text-center">
+                Frequently Asked Questions
+              </h2>
+              <div className="space-y-6">
                 <Card className="bg-gray-800 border-green-400/20">
-                  <CardContent className="p-8">
-                    <div className="space-y-8">
-                      <section>
-                        <h3 className="text-2xl font-semibold text-green-400 mb-4">Information We Collect</h3>
-                        <p className="text-gray-300 mb-4">
-                          We collect information you provide directly to us, such as when you purchase our products, 
-                          create an account, or contact us for support.
-                        </p>
-                        <ul className="list-disc list-inside text-gray-300 space-y-2">
-                          <li>Name and email address</li>
-                          <li>Payment information (processed securely by Digistore24)</li>
-                          <li>Communication preferences</li>
-                          <li>Support inquiries and correspondence</li>
-                        </ul>
-                      </section>
-
-                      <section>
-                        <h3 className="text-2xl font-semibold text-green-400 mb-4">How We Use Your Information</h3>
-                        <ul className="list-disc list-inside text-gray-300 space-y-2">
-                          <li>To process and fulfill your orders</li>
-                          <li>To provide customer support</li>
-                          <li>To send you product updates and important notices</li>
-                          <li>To improve our products and services</li>
-                          <li>To comply with legal obligations</li>
-                        </ul>
-                      </section>
-
-                      <section>
-                        <h3 className="text-2xl font-semibold text-green-400 mb-4">Data Sharing</h3>
-                        <p className="text-gray-300 mb-4">
-                          We do not sell, trade, or otherwise transfer your personal information to third parties, 
-                          except as described in this policy:
-                        </p>
-                        <ul className="list-disc list-inside text-gray-300 space-y-2">
-                          <li>With Digistore24 for payment processing</li>
-                          <li>With service providers who assist in our operations</li>
-                          <li>When required by law or to protect our rights</li>
-                        </ul>
-                      </section>
-
-                      <section>
-                        <h3 className="text-2xl font-semibold text-green-400 mb-4">Contact Us</h3>
-                        <p className="text-gray-300">
-                          If you have questions about this Privacy Policy, please contact us at support@fastseohub.com
-                        </p>
-                      </section>
-                    </div>
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-semibold text-green-400 mb-3">
+                      What format is the book delivered in?
+                    </h3>
+                    <p className="text-gray-300">
+                      The book is delivered as a high-quality PDF file that you can download immediately after purchase. 
+                      You'll also receive access to bonus materials and templates.
+                    </p>
+                  </CardContent>
+                </Card>
+                
+                <Card className="bg-gray-800 border-green-400/20">
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-semibold text-green-400 mb-3">
+                      Is there a money-back guarantee?
+                    </h3>
+                    <p className="text-gray-300">
+                      Yes, we offer a 60-day money-back guarantee. If you're not satisfied with the content, 
+                      contact us within 60 days for a full refund.
+                    </p>
+                  </CardContent>
+                </Card>
+                
+                <Card className="bg-gray-800 border-green-400/20">
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-semibold text-green-400 mb-3">
+                      How quickly will I receive access?
+                    </h3>
+                    <p className="text-gray-300">
+                      Access is instant! Once your payment is processed by Digistore24, you'll immediately 
+                      receive download links via email and be redirected to the download page.
+                    </p>
+                  </CardContent>
+                </Card>
+                
+                <Card className="bg-gray-800 border-green-400/20">
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-semibold text-green-400 mb-3">
+                      Are these techniques safe to use?
+                    </h3>
+                    <p className="text-gray-300">
+                      The techniques focus on understanding search psychology and user behavior. 
+                      They emphasize creating genuinely valuable content that resonates with both users and algorithms.
+                    </p>
                   </CardContent>
                 </Card>
               </div>
-            )}
-            
-            {activeSection === 'terms' && (
-              <div>
-                <h2 className="text-4xl font-bold text-green-400 mb-12 text-center">
-                  Terms of Service
-                </h2>
-                <Card className="bg-gray-800 border-green-400/20">
-                  <CardContent className="p-8">
-                    <div className="space-y-8">
-                      <section>
-                        <h3 className="text-2xl font-semibold text-green-400 mb-4">Product Usage</h3>
-                        <p className="text-gray-300 mb-4">
-                          By purchasing "Cognitive SEO Warfare," you agree to use the content for lawful purposes only. 
-                          The strategies presented are for educational purposes and should be implemented responsibly.
-                        </p>
-                      </section>
-
-                      <section>
-                        <h3 className="text-2xl font-semibold text-green-400 mb-4">Refund Policy</h3>
-                        <p className="text-gray-300 mb-4">
-                          We offer a 30-day money-back guarantee from the date of purchase. Refunds are processed 
-                          through Digistore24 and may take 5-10 business days to appear in your account.
-                        </p>
-                      </section>
-
-                      <section>
-                        <h3 className="text-2xl font-semibold text-green-400 mb-4">Intellectual Property</h3>
-                        <p className="text-gray-300 mb-4">
-                          All content in this product is protected by copyright and is for personal use only. 
-                          Redistribution, sharing, or reselling of the content is strictly prohibited.
-                        </p>
-                      </section>
-
-                      <section>
-                        <h3 className="text-2xl font-semibold text-green-400 mb-4">Disclaimer</h3>
-                        <p className="text-gray-300 mb-4">
-                          Results may vary based on implementation and market conditions. We make no guarantees 
-                          about specific outcomes from using the strategies in this book.
-                        </p>
-                      </section>
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
-            )}
-            
-            {activeSection === 'legal' && (
-              <div>
-                <h2 className="text-4xl font-bold text-green-400 mb-12 text-center">
-                  Legal Information
-                </h2>
-                <Card className="bg-gray-800 border-green-400/20">
-                  <CardContent className="p-8">
-                    <div className="space-y-8">
-                      <section>
-                        <h3 className="text-2xl font-semibold text-green-400 mb-4">Company Information</h3>
-                        <div className="space-y-4 text-gray-300">
-                          <div className="flex items-start space-x-3">
-                            <Users className="w-5 h-5 text-green-400 mt-1" />
-                            <div>
-                              <p className="font-semibold">Business Owner:</p>
-                              <p>Aimad Djeddi</p>
-                            </div>
-                          </div>
-                          
-                          <div className="flex items-start space-x-3">
-                            <MapPin className="w-5 h-5 text-green-400 mt-1" />
-                            <div>
-                              <p className="font-semibold">Business Address:</p>
-                              <p>Available upon request for legal purposes</p>
-                            </div>
-                          </div>
-                          
-                          <div className="flex items-start space-x-3">
-                            <FileText className="w-5 h-5 text-green-400 mt-1" />
-                            <div>
-                              <p className="font-semibold">VAT ID:</p>
-                              <p>Available upon request for business customers</p>
-                            </div>
-                          </div>
-                          
-                          <div className="flex items-start space-x-3">
-                            <Mail className="w-5 h-5 text-green-400 mt-1" />
-                            <div>
-                              <p className="font-semibold">Contact Email:</p>
-                              <p>support@fastseohub.com</p>
-                            </div>
-                          </div>
-                          
-                          <div className="flex items-start space-x-3">
-                            <Phone className="w-5 h-5 text-green-400 mt-1" />
-                            <div>
-                              <p className="font-semibold">Phone:</p>
-                              <p>0665121272</p>
-                            </div>
-                          </div>
-                        </div>
-                      </section>
-
-                      <section>
-                        <h3 className="text-2xl font-semibold text-green-400 mb-4">Payment Processing</h3>
-                        <div className="bg-gray-900/50 p-4 rounded-lg">
-                          <p className="text-yellow-400 font-semibold mb-2">Important Notice:</p>
-                          <p className="text-gray-300">
-                            The withdrawal from your account will be done by Digistore24. 
-                            All payments are processed securely through our payment partner Digistore24.
-                          </p>
-                        </div>
-                      </section>
-
-                      <section>
-                        <h3 className="text-2xl font-semibold text-green-400 mb-4">Regulatory Compliance</h3>
-                        <p className="text-gray-300 mb-4">
-                          This business operates in compliance with applicable consumer protection laws and 
-                          e-commerce regulations. All customer rights are protected according to local legislation.
-                        </p>
-                      </section>
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
-            )}
+            </div>
           </div>
         </section>
       )}
@@ -852,6 +683,13 @@ const Index = () => {
               </div>
               <div className="text-sm text-gray-400">
                 Powered by Digistore24 • Secure Payment Processing
+              </div>
+              
+              {/* Digistore24 Footer Badge Placeholder */}
+              <div className="inline-block p-3 bg-gray-800/30 rounded-lg border border-gray-700">
+                <p className="text-xs text-gray-400">
+                  [Digistore24 Footer Badge - Add your official badge here]
+                </p>
               </div>
             </div>
           </div>
