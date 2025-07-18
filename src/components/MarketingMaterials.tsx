@@ -111,7 +111,7 @@ const MarketingMaterials = () => {
           </div>
 
           <div className="bg-gray-700/50 p-4 rounded-lg">
-            <h5 className="font-semibold text-white mb-2">Caption Structure (Hook > Value > CTA):</h5>
+            <h5 className="font-semibold text-white mb-2">Caption Structure (Hook {'->'} Value {'->'} CTA):</h5>
             <div className="text-gray-300 text-sm space-y-2">
               <p><span className="text-green-400">Hook:</span> "Most people fail at SEO because..."</p>
               <p><span className="text-green-400">Value:</span> "Here are 3 psychological triggers that actually work: 1) Authority mimicry 2) Semantic entanglement 3) Cognitive load optimization"</p>
