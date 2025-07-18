@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Download, CheckCircle, Mail, Shield } from 'lucide-react';
@@ -38,7 +37,7 @@ const ThankYou = () => {
                 <Button 
                   size="lg" 
                   className="bg-green-600 hover:bg-green-500 text-white px-8 py-4 text-lg font-bold"
-                  onClick={() => window.open('https://drive.google.com/file/d/10FeyE0DjvfVS0Y5wj4naMDezlPdwRANX/view?usp=drive_link', '_blank')}
+                  onClick={() => window.open('https://drive.google.com/file/d/1WmJyIl9ma-XBqpOOcwEVJgfk1oD6NOJU/view?usp=drive_link', '_blank')}
                 >
                   <Download className="w-6 h-6 mr-3" />
                   Download Your Book Now
@@ -133,11 +132,11 @@ const ThankYou = () => {
 
           {/* Official Digistore24 Thank You Badge */}
           <div className="mt-8 flex justify-center">
-            <img 
-              src="https://i.ibb.co/Q3vM3RWL/digistore24-badge.png" 
-              alt="Secured by Digistore24"
-              className="h-16"
-            />
+            <div className="inline-block p-4 bg-gray-800/50 rounded-lg border border-gray-700">
+              <p className="text-sm text-gray-300 font-medium">
+                Payment processed by Digistore24
+              </p>
+            </div>
           </div>
         </div>
       </div>

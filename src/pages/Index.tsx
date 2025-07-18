@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Brain, Zap, Eye, Shield, Target, Code, ChevronDown, Globe, Download, Star, Check, Book, Lock, Search, Mail, Phone, MapPin, FileText, Scale, Users, Calendar, Clock, Award } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -192,7 +191,7 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white overflow-x-hidden">
+    <div className="min-h-screen bg-gray-900 text-white">
       {/* Language Switcher */}
       <div className="fixed top-4 right-4 z-50">
         <Button
@@ -287,12 +286,10 @@ const Index = () => {
           
           {/* Official Digistore24 Sales Badge */}
           <div className="mt-8 text-center">
-            <div className="inline-block">
-              <img 
-                src="https://i.ibb.co/Q3vM3RWL/digistore24-badge.png" 
-                alt="Secured by Digistore24"
-                className="h-16 mx-auto"
-              />
+            <div className="inline-block p-4 bg-gray-800/50 rounded-lg border border-gray-700">
+              <p className="text-sm text-gray-300 font-medium">
+                Payment processed by Digistore24
+              </p>
             </div>
           </div>
         </div>
@@ -605,9 +602,9 @@ const Index = () => {
       )}
 
       {/* Footer */}
-      <footer className="bg-gray-900 py-12 px-4 border-t border-gray-800">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-4 gap-8 mb-12">
+      <footer className="bg-black/50 py-12">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             {/* Brand */}
             <div className="md:col-span-1">
               <h3 className="text-xl font-bold text-green-400 mb-4">FastSEOHub.com</h3>
@@ -688,13 +685,11 @@ const Index = () => {
                 Powered by Digistore24 • Secure Payment Processing
               </div>
               
-              {/* Official Digistore24 Footer Badge */}
-              <div className="flex justify-center">
-                <img 
-                  src="https://i.ibb.co/Q3vM3RWL/digistore24-badge.png" 
-                  alt="Secured by Digistore24"
-                  className="h-12"
-                />
+              {/* Digistore24 Footer Badge */}
+              <div className="inline-block p-3 bg-gray-800/30 rounded-lg border border-gray-700">
+                <p className="text-xs text-gray-300 font-medium">
+                  Payment processed by Digistore24
+                </p>
               </div>
             </div>
           </div>
