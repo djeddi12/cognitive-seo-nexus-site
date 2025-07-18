@@ -9,7 +9,7 @@ const Legal = () => {
       <div className="container mx-auto px-4 py-20">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl font-bold text-green-400 mb-12 text-center">
-            Legal Information
+            Legal Information for COGNITIVE SEO WARFARE
           </h1>
           
           <Card className="bg-gray-800 border-green-400/20">
@@ -23,20 +23,20 @@ const Legal = () => {
                       <div className="flex items-start space-x-4">
                         <Building className="w-6 h-6 text-green-400 mt-1" />
                         <div>
-                          <h3 className="font-semibold text-white mb-2">Company Name</h3>
-                          <p className="text-gray-300">FastSEOHub.com</p>
-                          <p className="text-gray-300">Owner: Aimad Djeddi</p>
+                          <h3 className="font-semibold text-white mb-2">Business Owner</h3>
+                          <p className="text-gray-300">Aimad Djeddi</p>
                         </div>
                       </div>
                       
                       <div className="flex items-start space-x-4">
                         <MapPin className="w-6 h-6 text-green-400 mt-1" />
                         <div>
-                          <h3 className="font-semibold text-white mb-2">Business Address</h3>
+                          <h3 className="font-semibold text-white mb-2">Full Address</h3>
                           <p className="text-gray-300">
-                            [Complete Business Address]<br />
-                            [City, Postal Code]<br />
-                            [Country]
+                            Aimad Djeddi<br />
+                            1234 Ferphos Street<br />
+                            Tebessa City, AC 12000<br />
+                            Algeria
                           </p>
                         </div>
                       </div>
@@ -46,7 +46,7 @@ const Legal = () => {
                       <div className="flex items-start space-x-4">
                         <Phone className="w-6 h-6 text-green-400 mt-1" />
                         <div>
-                          <h3 className="font-semibold text-white mb-2">Contact Phone</h3>
+                          <h3 className="font-semibold text-white mb-2">Phone</h3>
                           <p className="text-gray-300">0665121272</p>
                         </div>
                       </div>
@@ -63,48 +63,48 @@ const Legal = () => {
                 </section>
 
                 <section>
-                  <h2 className="text-2xl font-semibold text-green-400 mb-4">Tax Information</h2>
-                  <div className="bg-gray-700 p-6 rounded-lg">
-                    <p className="text-gray-300 mb-2">
-                      <span className="font-semibold">VAT ID:</span> [Your VAT ID Number]
-                    </p>
-                    <p className="text-gray-300 mb-2">
-                      <span className="font-semibold">Tax Number:</span> [Your Tax Number]
+                  <h2 className="text-2xl font-semibold text-green-400 mb-4">Payment Processing</h2>
+                  <div className="bg-gray-700 p-6 rounded-lg space-y-3">
+                    <p className="text-gray-300">
+                      All payments for COGNITIVE SEO WARFARE digital products are processed by Digistore24.
                     </p>
                     <p className="text-gray-300">
-                      <span className="font-semibold">Business Registration:</span> [Registration Number]
+                      The debit is made by Digistore24, and the withdrawal from your account will be executed by Digistore24.
+                    </p>
+                    <p className="text-gray-300">
+                      <span className="font-semibold text-green-400">The charge will appear as:</span> DIGISTORE24*SEOFRAMEWORK on your bank statement.
                     </p>
                   </div>
                 </section>
 
                 <section>
-                  <h2 className="text-2xl font-semibold text-green-400 mb-4">Payment Processing</h2>
-                  <p className="text-gray-300 mb-4">
-                    All payments are processed securely by Digistore24 GmbH.
-                  </p>
-                  <p className="text-gray-300">
-                    <span className="font-semibold">Important:</span> The withdrawal from your account will be done by Digistore24.
-                  </p>
+                  <h2 className="text-2xl font-semibold text-green-400 mb-4">Product Information</h2>
+                  <div className="bg-gray-700 p-6 rounded-lg space-y-3">
+                    <p className="text-gray-300">
+                      <span className="font-semibold text-green-400">COGNITIVE SEO WARFARE</span> is a digital product (PDF) delivered instantly after purchase.
+                    </p>
+                    <p className="text-gray-300">
+                      You will receive an email with download instructions.
+                    </p>
+                    <p className="text-gray-300">
+                      You can also access your download link directly on the thank-you page after completing your order.
+                    </p>
+                    <p className="text-gray-300">
+                      <span className="font-semibold text-green-400">Price:</span> $39.00
+                    </p>
+                  </div>
                 </section>
 
                 <section>
-                  <h2 className="text-2xl font-semibold text-green-400 mb-4">Product Delivery</h2>
-                  <p className="text-gray-300 mb-4">
-                    This is a <span className="font-semibold text-green-400">digital product</span> delivered via instant PDF download.
-                  </p>
-                  <p className="text-gray-300">
-                    You will receive your download link immediately after successful payment completion. 
-                    The product is delivered electronically - no physical shipping is involved.
-                  </p>
-                </section>
-
-                <section>
-                  <h2 className="text-2xl font-semibold text-green-400 mb-4">Dispute Resolution</h2>
-                  <p className="text-gray-300">
-                    Any disputes arising from the purchase or use of our products should first be 
-                    addressed through our customer support at support@fastseohub.com. We are 
-                    committed to resolving any issues promptly and fairly.
-                  </p>
+                  <h2 className="text-2xl font-semibold text-green-400 mb-4">Refund Guarantee</h2>
+                  <div className="bg-gray-700 p-6 rounded-lg">
+                    <p className="text-gray-300 mb-3">
+                      All digital purchases come with a <span className="font-semibold text-green-400">60-day money-back guarantee</span>.
+                    </p>
+                    <p className="text-gray-300">
+                      If you're not satisfied for any reason, simply contact our support team and request a full refund — no questions asked.
+                    </p>
+                  </div>
                 </section>
 
                 <section className="border-t border-gray-600 pt-6">
