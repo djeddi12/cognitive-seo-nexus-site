@@ -133,7 +133,7 @@ const ThankYou = () => {
               </div>
               <div>
                 <a 
-                  href="/legal" 
+                  href="/#legal" 
                   className="text-gray-400 hover:text-gray-300 transition-colors text-sm"
                 >
                   Legal Information
