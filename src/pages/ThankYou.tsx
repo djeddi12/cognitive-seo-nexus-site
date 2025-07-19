@@ -78,10 +78,10 @@ const ThankYou = () => {
                 Payment Information
               </h3>
               <p className="text-gray-300 mb-2">
-                <span className="font-semibold">Your credit card statement will show a charge from Digistore24</span>
+                <span className="font-semibold">The debit is made by Digistore24 GmbH (Germany)</span>
               </p>
               <p className="text-gray-300 text-sm">
-                Payment processed securely by Digistore24 Inc. (United States)
+                Payment processed securely by Digistore24
               </p>
             </CardContent>
           </Card>
@@ -122,12 +122,24 @@ const ThankYou = () => {
             <p className="text-gray-400 mb-4">
               Need help or have questions?
             </p>
-            <a 
-              href="/contact" 
-              className="text-green-400 hover:text-green-300 transition-colors"
-            >
-              Contact our support team
-            </a>
+            <div className="space-y-2">
+              <div>
+                <a 
+                  href="/contact" 
+                  className="text-green-400 hover:text-green-300 transition-colors"
+                >
+                  Contact our support team
+                </a>
+              </div>
+              <div>
+                <a 
+                  href="/legal" 
+                  className="text-gray-400 hover:text-gray-300 transition-colors text-sm"
+                >
+                  Legal Information
+                </a>
+              </div>
+            </div>
           </div>
 
           {/* Official Digistore24 Thank You Badge */}

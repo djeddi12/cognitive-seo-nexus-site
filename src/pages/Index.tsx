@@ -655,12 +655,12 @@ const Index = () => {
                   </button>
                 </li>
                 <li>
-                  <button 
-                    onClick={() => showSection('legal')}
-                    className="text-gray-400 hover:text-green-400 transition-colors cursor-pointer"
+                  <a 
+                    href="/legal"
+                    className="text-gray-400 hover:text-green-400 transition-colors"
                   >
                     Legal Information
-                  </button>
+                  </a>
                 </li>
               </ul>
             </div>
